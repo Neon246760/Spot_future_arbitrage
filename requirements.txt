@@ -1,0 +1,5 @@
+requests~=2.32.3
+ccxt~=4.4.14
+colorama~=0.4.6
+pandas~=2.2.3
+dataframe_image~=0.2.4
