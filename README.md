@@ -29,7 +29,7 @@
    在 `config.py` 文件中，填写 `BINANCE_CONFIG` 字典中的 `apiKey` 和 `secret` 字段。（只运行`monitor.py`可以不配置api）
 
 2. 设置代理（可选）：
-   如果需要使用代理，请在 `config.py` 中取消注释并设置 `proxies` 字典。
+   如果需要使用代理，请在 `config.py` 中取消注释并设置 `proxies` 字典。（为保证稳定运行，中国大陆用户使用时请使用代理）
 
 3. 配置交易参数：
    根据您的需求调整 `execute_usdt`、`max_count`、`open_threshold` 和 `close_threshold` 等参数。
@@ -38,20 +38,21 @@
    ```bash
    python monitor.py
    ```
+   部署服务器前，可通过修改`monitor.py`的参数`is_debug`进行调试
 
-5. 监控周期设置：
+6. 监控周期设置：
    您可以在 `config.py` 中调整 `monit_interval` 来设置监控的运行周期。
 
-6. 企业微信机器人配置
+7. 企业微信机器人配置
     请在`wechat_webhook_url`中配置企业微信机器人的url，程序会将每日的套利结果发送给机器人。
 
-7. 开仓阈值
+8. 开仓阈值
     当决定开仓时，请配置好`open_threshold`，然后运行`open_position.py`，程序将在大于阈值时开仓
     ```bash
    python open_position.py
    ```
 
-8. 平仓阈值
+9. 平仓阈值
     当决定平仓时，请配置好`close_threshold`，然后运行`close_position.py`，程序将在小于阈值时平仓
     ```bash
    python close_position.py
