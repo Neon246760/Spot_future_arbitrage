@@ -25,8 +25,8 @@
 
 ## 使用
 
-1. 配置您的 API 密钥和秘密：
-   在 `config.py` 文件中，填写 `BINANCE_CONFIG` 字典中的 `apiKey` 和 `secret` 字段。
+1. 配置您的 API 公钥与私钥：
+   在 `config.py` 文件中，填写 `BINANCE_CONFIG` 字典中的 `apiKey` 和 `secret` 字段。（只运行`monitor.py`可以不配置api）
 
 2. 设置代理（可选）：
    如果需要使用代理，请在 `config.py` 中取消注释并设置 `proxies` 字典。
@@ -46,13 +46,13 @@
     请在`wechat_webhook_url`中配置企业微信机器人的url，程序会将每日的套利结果发送给机器人。
 
 7. 开仓阈值
-    当决定开仓时，请配置好`open_threshold`，然后运行open_position.py，程序将在大于阈值时开仓
+    当决定开仓时，请配置好`open_threshold`，然后运行`open_position.py`，程序将在大于阈值时开仓
     ```bash
    python open_position.py
    ```
 
 8. 平仓阈值
-    当决定平仓时，请配置好`close_threshold`，然后运行close_position.py，程序将在小于阈值时平仓
+    当决定平仓时，请配置好`close_threshold`，然后运行`close_position.py`，程序将在小于阈值时平仓
     ```bash
    python close_position.py
    ```
